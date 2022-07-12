@@ -1,5 +1,4 @@
 import "./App.scss";
-import "antd/dist/antd.less";
 
 import { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";

@@ -28,13 +28,16 @@ const checkLogin = async (data) => {
 };
 
 const registerUser = async (data) => {
+  console.log(data);
   return await axiosClient
     .post(types.USERS_REGISTER, data)
     .then((res) => {
+      console.log(data);
       const response = res.data;
       return response;
     })
     .catch((error) => {
+      console.log(error);
       const response = error.response.data;
       return response;
     });

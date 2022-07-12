@@ -42,8 +42,13 @@ const RegisterModal = ({ onClick }) => {
 
   const onFinish = async (values) => {
     console.log("Received values of form: ", values);
-    const res = await usersApi.registerUser(values);
-    console.log(res);
+    const data = {
+      username: values.username,
+      password: values.password,
+      first_name: values.firstName,
+      last_name: values.lastname,
+    };
+    const res = await usersApi.registerUser(data);
     if (!res.success) {
       ModalRespone.error(res.message);
     } else {
