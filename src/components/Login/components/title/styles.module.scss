@@ -1,0 +1,6 @@
+@import "../../../../styles/utilities/mixins";
+
+.container {
+  @include title;
+  color: white;
+}

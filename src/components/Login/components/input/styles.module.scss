@@ -1,0 +1,30 @@
+@import "../../../../styles/utilities/mixins";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin-bottom: -30px;
+  .container_form_label {
+    color: $c_content;
+  }
+  .container_form_item {
+    display: flex;
+    align-items: center;
+    .container_form_input {
+      @include input;
+    }
+    .container_form_icon {
+      margin: 5px;
+      margin-right: -25px;
+      z-index: 1;
+      color: $c_label;
+    }
+  }
+  .container_form_error {
+    height: 20px;
+    @include error;
+    padding-right: 6px;
+  }
+}
